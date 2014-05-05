@@ -204,14 +204,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula metus sapi
 
 \section{Introduction}
 
-\dropcap{N}am fermentum sapien at enim varius consectetur. Quisque lobortis imperdiet mauris, et accumsan libero vulputate vitae. Integer lacinia purus vel metus tempus suscipit. Curabitur ac sapien quis mauris euismod commodo. Sed pharetra sem elit. Fusce ultrices, mauris eu fermentum tempor, tellus sem ornare lectus, in convallis nunc urna id dolor. Donec convallis ligula vitae sem viverra fermentum. Mauris in ullamcorper erat. Donec ultrices tempus nibh quis vestibulum. This statement requires citation \cite{CLAcha1}.
-
-\begin{equation}
-\mfrac{D \theta}{Dt}=\mfrac{\pr \theta}{\pr t} + u\cdot \nabla
-\theta=0 \label{qg1}
-\end{equation}
-
-Referencing equation \eqref{qg1}. Praesent volutpat, nibh in dignissim commodo, tellus justo consequat erat, vel consequat mi arcu vel lectus. Aliquam a tellus nec felis sagittis consequat. Quisque convallis imperdiet neque a tempor. Nulla non erat urna. Mauris vel lorem magna, tristique auctor ipsum. Aliquam pharetra eleifend massa. Donec porttitor sagittis luctus. Aliquam pretium luctus leo quis congue. Morbi vel felis mi. Suspendisse viverra tortor pretium orci lacinia eleifend. Phasellus aliquam, nunc eu cursus feugiat, erat odio porttitor libero, quis accumsan orci ipsum ut lorem. Vestibulum pharetra malesuada egestas. Sed non orci sit amet erat suscipit fringilla in et diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ut rhoncus nulla. Aenean porta rhoncus suscipit.
+\dropcap{S}tructure of the introduction
+\newline
+\begin{itemize}
+\item Whole Genome Duplications background
+\item WGD influences on Transcription Factor Binding Sites?
+\item the \textit{Paramecium} project, experimental part, etc. some work is done and random sequences?
+\item Here, focusing on the computational part, developing pipeline, showed that etc.
+\end{itemize}
 
 %------------------------------------------------
 
@@ -253,8 +253,12 @@ Suspendisse viverra eleifend nulla at facilisis. Nullam eget tellus orci. Cras s
 %% The Materials and Methods section header will be added automatically.
 
 \begin{materials}
-Suspendisse viverra eleifend nulla at facilisis. Nullam eget tellus orci. Cras sit amet lorem velit. Maecenas rhoncus pellentesque orci eget vulputate. Phasellus massa nisi, mattis nec elementum accumsan, blandit non neque. In ac enim elit, sit amet luctus ante. Cras feugiat commodo lectus, vitae convallis dui sagittis id. In in tellus lacus, sed lobortis eros. Phasellus sit amet eleifend velit. Duis ornare dapibus porttitor. Maecenas eros velit, dignissim at egestas in, tincidunt lacinia erat. Proin elementum mi vel lectus suscipit fringilla. Mauris justo est, ullamcorper in rutrum interdum, accumsan eget mi. Maecenas ut massa aliquet purus eleifend vehicula in a nisi. Fusce molestie cursus lacinia.
 
+-> developped a whole pipeline (show simple pipeline graph)
+From annotations and assembly files -> extracted upstream sequences of given length minimum length 15nt cutoff at 250nt. From families with specific conditions. X families identified, In each family CDSs were retrieved, aligned using protein-guided alignment (TranslatorX) and ML tree (PhyML) was computed -> used BigFoot to consider the phylogenetic signal + Comparison with MEME.
+
+From this, X motifs matched partially (quantify!) between MEME and BigFoot -> search through the genome this motifs in each species.
+Using publicly available RNA expression data, search correlations between motifs and expression level.
 \begin{definition}
 A bounded function $\theta$ is a weak solution of QG if for any
 $\phi\,\epsilon\,
