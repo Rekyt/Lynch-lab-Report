@@ -204,33 +204,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula metus sapi
 
 \section{Introduction}
 
-\dropcap{S}tructure of the introduction
-\newline
-\begin{itemize}
-\item Whole Genome Duplications background, major evolutionary force
-\item the \textit{Paramecium} project, why \textit{Paramecium} is interesting, the aurelia complex
-\item Here, focusing on the computational part, developing pipeline, showed that etc.
-\end{itemize}
-
-Since Ohno first hypothesized the influence of Whole-Genome Duplications (WGD), scientists kept showing that a broad number of species experienced WGD at least once: yeast, Drosophila, Vertebrates, Salmonids, Paramecium. WGD are evolutionary event when the genome of a given individual is duplicated, meaning that the whole genome is in two copies, duplicated pairs of genes are paralogs. WGD may be involved in many evolutive radiations as it creates a context of loosen selection. According to the Duplication-Degeneration-Complementation model,
-
-To understand the consequences of WGDs we have been studying the \textit{Paramecium aurelia} complex. As one of the only free-living eukaryotes studied, other than yeasts, Paramecium is a very attractive model. The diversity of the \textit{Paramecium} ciliates is well studied.
-
-We focused on four species of \textit{Paramecium}: \textit{P. biaurelia}, \textit{P. sexaurelia}, \textit{P. tetraurelia} and \textit{P. caudatum} as an outgroup (see phylogenetic tree). The three \textit{aurelia} species underwent two rounds of WGDs, WGDX (... years ago) and WGDX (... years ago).
-
-\textbf{Biological questions:} Do gene expression is linked, in \textit{P.}, with specific motifs? How are TFBS affected by WGD? Are they conserved among species, is this linked to expression level? Conserved among each species? Is there a bias of TFBS usage in certain species?
+\input{Introduction.tex}
 %------------------------------------------------
 
 \section{Results}
 
+\input{Results.tex}
 %------------------------------------------------
 
 \section{Discussion}
 
-Conservation among species. Major results is that. Divergent resolution of WGD $\rightarrow$ divergence in motifs?
-
-
-Motifs detection should take phylogeny into account for comparative analysis. Not the same value.
+\input{Discussion.tex}
 %----------------------------------------------------------------------------------------
 %	MATERIALS AND METHODS
 %----------------------------------------------------------------------------------------
@@ -240,17 +224,8 @@ Motifs detection should take phylogeny into account for comparative analysis. No
 
 \begin{materials}
 
-developped a whole pipeline (show simple pipeline graph)
-\begin{itemize}
-\item Families upstream sequences extraction
-\item CDSs extraction and alignment
-\item CDSs phylogenetic tree
-\item BigFoot identification (explanation of phylogenetic score and alignment score)
-\item MEME research
-\item Comparison MEME and BigFoot
-\item Identification of given motif in species genome
-\item Correlation between motifs and expression levels
-\end{itemize}
+\input{Methods.tex}
+
 \end{materials}
 
 
