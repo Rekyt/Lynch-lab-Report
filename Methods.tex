@@ -34,5 +34,13 @@ CDSs in each family were aligned using TranslatorX (ref. needed) a protein-guide
 
 \subsection{Phylogenetic footprinting}
 
-We used a phylogenetic footprinting software BigFoot (ref. needed) to detect highly conserved motifs in upstream sequences. We used 10000 burn-in cycles and 20000 cycles with a sampling rate of 1000 for the Hidden Monte-Carlo Markov Chain process.
+We used a phylogenetic footprinting software BigFoot (ref. needed) to detect highly conserved motifs in upstream sequences. We used 10000 burn-in cycles and 20000 cycles with a sampling rate of 1000 for the Hidden Monte-Carlo Markov Chain (HMCMC) process. BigFoot aligns the given sequences with gaps and tries to identify conserved and non-conserved regions, the stochastic process of the HMCMC let BigFoot refines its alignement. BigFoot assigns to each nucleotide an alignment score, which represents the confidence in the alignment, and a prediction score, measuring the \"phylogenetic signal\" of the given nucleotide, \textit{i.e.}, the more conserved the nucleotide is, according to the phylogenetic tree, the better the score.
+
+Using these scores we detected motifs of at least 6 nucleotides long, alignment score over 0.8 and phylogenetic score over 0.9. Because of the known biological nature of Transcription Factor Binding Sites, we allowed for a \"gap\" in motifs of 2 nucleotide, so that the scores could drop under the thresholds in those gaps.
+
+Among the previous 5008 families, we identified 1060 motifs in 735 families.
+
+\subsection{Comparison with MEME}
+
+To confirm our phylogenetic footprinting findings, used MEME (ref. needed) to analyze the motifs in each family. MEME use a statistical process to find motifs. Usually, among a set of given
 
