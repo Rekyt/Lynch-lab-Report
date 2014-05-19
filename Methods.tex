@@ -12,15 +12,27 @@ developped a whole pipeline (show simple pipeline graph)
 
 Used TranslatorX, PhyML, BigFoot, MEME.
 
+We set up a pipeline to make our analyse (Fig. ), the code is available at.
+
 \subsection{Genomes and Annotation}
 
 We used annotation and sequence from our previous analysis for P. and P. etc. (see .) and the additionnal sequence of.
 
 \subsection{Gene families}
 
-Looking at the phylogenetic tree of the \textit{aurelia} species, two WGDs occured at the root and affected three of our species. We have established some gene families from WGD2 using comparison, each family contains a set of orthologous genes between the four \textit{aurelia} species studied, and eventually, the paralogous gene found in each species. In our dataset we had 5781 families.
+Looking at the phylogenetic tree of the \textit{aurelia} species, two WGDs occured at the root and affected three of our species. We have established some gene families from WGD2 using comparison, each family contains a set of orthologous genes between the four \textit{aurelia} species studied, and eventually, the paralogous gene found in each species ; at maximum the families contain 13 different genes. We identified 5781 families.
 
 \subsection{Upstream sequences extraction}
 
-We considered only families with at least 4 members. Then, using our assembly and annotation of each species genome, we extracted upstream regions from 15nt with a cut-off at 250nt of all genes of the family. If the upstream region of a gene overlapped with another gene we discarded the gene, if the upstream region was less than 15nt long we also discarded the gene. Considering discarded genes, we kept families with at least 4 members in our datasets. Under these conditions, we extracted genes from 5008 families.
+We considered only families with at least 4 genes. Then, using our assembly and annotation of each species genome, we extracted upstream regions from 15nt with a cut-off at 250nt of all genes of the family. If the upstream region of a gene overlapped with another gene we discarded the gene, if the upstream region was less than 15nt long we also discarded the gene. Considering discarded genes, we kept only families with at least 4 members in our datasets. Under these conditions, we extracted genes from 5008 families.
+
+\subsection{Coding Sequences extraction and alignment}
+
+Phylogenetic footprinting requires a phylogenetic tree when detecting motifs, to weigh the phylogenetical signal of given motifs. A motif conserved between two close species will have less importance than a motif conserved in two distant species. Because we are focusing on the conservation of upstream sequences we chose not to use them to avoid circularity. Instead, corresponding coding sequences (CDS) were extracted and used to model phylogenetic trees for each family. We prefered to have a gene tree over species tree, to avoid eventual inconsistencies because of gene conversion (ref. needed).
+
+CDSs in each family were aligned using TranslatorX (ref. needed) a protein-guided alignment software. The Maximum Likelihood (ML) tree was then computed using PhyML (ref. needed) default parameters.
+
+\subsection{Phylogenetic footprinting}
+
+We used a phylogenetic footprinting software BigFoot (ref. needed) to detect highly conserved motifs in upstream sequences. We used 10000 burn-in cycles and 20000 cycles with a sampling rate of 1000 for the Hidden Monte-Carlo Markov Chain process.
 
