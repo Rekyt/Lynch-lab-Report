@@ -2,11 +2,13 @@
 
 \subsection{Species tree or gene tree?}
 
+
 Using a phylogenetic footprinting program means we have to use a phylogenetic tree and depending on the phylogenetic tree we are using, the evolutionary signal used in the footprinting is not identical.
 
 The species tree (see figure.) gives us the relation between all considered, accounting for the various splits between species along with WGDs. The problem is that, not all gene families follow this tree. In particular, gene conversion, is heavily involved in shifting genes tree away from species tree: paralogs gene recombine and ...
 
 \subsection{Motif detection strategy}
+
 
 BigFoot does not output directly identified motifs, instead it produces two files with an alignment of the sequences and associated phylogenetic and alignment scores. The phylogenetic scores is computed, etc. The alignement scores, etc.
 
@@ -16,4 +18,9 @@ To answer this problem we use a sliding window method of 8 nucleotides in our an
 
 \subsection{Measure motif relevance}
 
-To assess the relevance of motifs found from BigFoot's outputs, we compared them to a well-known motif finding program: MEME
+
+MEME was shown to have a very high False Positive Rate of the discovery (Ref. needed). That is why many studies combine multiple motif detection tools (Ref. needed).
+
+In our case, MEME is of particular interest as it obtains motifs using a totally different method from BigFoot.
+
+To assess the relevance of motifs found from BigFoot's outputs, we compared them to a well-known motif finding program: MEME. For each family we identified overlapping motifs between MEME and BigFoot. We computed an overlapping index as follows: $0 \leq \frac{nucleotides in common}{size of the smallest motif} \leq 1$, if this index was over $0.9$ we would then considered the motif as relevant.
