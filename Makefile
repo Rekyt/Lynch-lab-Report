@@ -2,13 +2,16 @@
 
 .PHONY: all clean
 
-all: PNASTMPL.pdf
+all: plos_template.pdf
 
-PNASTMPL.pdf: PNASTMPL.tex
-	pdflatex $<
+plos_template.pdf: plos_template.tex
+	@pdflatex $<
+	@bibtex $<
+	@pdflatex $<
+	@pdflatex $<
 
 clean:
-	echo "Removing .log files..."
-	rm *.log
-	echo "Removing .aux files..."
-	rm *.aux
+	@echo "Removing .log files..."
+	@rm *.log
+	@echo "Removing .aux files..."
+	@rm *.aux
