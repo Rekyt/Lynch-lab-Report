@@ -1,13 +1,17 @@
-\section{Challenges}
+\section*{Challenges}
 
-\subsection{Species tree or gene tree?}
+
+
+\subsection*{Species tree or gene tree?}
 
 
 Using a phylogenetic footprinting program means we have to use a phylogenetic tree and depending on the phylogenetic tree we are using, the evolutionary signal used in the footprinting is not identical.
 
 The species tree (see figure.) gives us the relation between all considered, accounting for the various splits between species along with WGDs. The problem is that, not all gene families follow this tree. In particular, gene conversion, is heavily involved in shifting genes tree away from species tree: paralogs gene recombine and ...
 
-\subsection{Motif detection strategy}
+
+
+\subsection*{Motif detection strategy}
 
 
 BigFoot does not output directly identified motifs, instead it produces two files with an alignment of the sequences and associated phylogenetic and alignment scores. The phylogenetic scores is computed, etc. The alignement scores, etc.
@@ -16,7 +20,9 @@ Transcription factor binding sites are known to be generally conserved but degen
 
 To answer this problem we use a sliding window method of 8 nucleotides in our analysis: for each family, we looked at the scores of 8 nucletodies at the time and slide along the sequences. If the window contained at least 6 bases with scores above our thresholds, we would retain this motif. Then, from this particular region we would try to extend the sequence by adding adjacent nucleotides with good scores.
 
-\subsection{Measure motif relevance}
+
+
+\subsection*{Measure motif relevance}
 
 
 MEME was shown to have a very high False Positive Rate of the discovery (Ref. needed). That is why many studies combine multiple motif detection tools (Ref. needed).
