@@ -10,6 +10,8 @@ plos_template.pdf: plos_template.tex
 	@pdflatex $<
 	@pdflatex $<
 
+plos_template.tex: Introduction.tex Challenges.tex Results.tex Pipeline.tex Perspectives.tex
+	touch $@
 clean:
 	@echo "Removing .log files..."
 	@rm *.log
