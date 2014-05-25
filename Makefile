@@ -6,9 +6,9 @@ all: plos_template.pdf
 
 plos_template.pdf: plos_template.tex
 	@pdflatex $<
-	@bibtex $<
-	@pdflatex $<
-	@pdflatex $<
+	#@bibtex $<
+	#@pdflatex $<
+	#@pdflatex $<
 
 plos_template.tex: Introduction.tex Materials.tex Challenges.tex Results.tex Pipeline.tex Perspectives.tex
 	touch $@
