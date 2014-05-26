@@ -94,8 +94,6 @@ Michael Lynch$^{2}$
 
 \input{Materials.tex}
 
-\input{Pipeline.tex}
-
 \input{Challenges.tex}
 
 \input{Results.tex}
@@ -116,17 +114,15 @@ Michael Lynch$^{2}$
 \bibliography{template}
 
 \section*{Figure Legends}
-%\begin{figure}[!ht]
-%\begin{center}
-%%\includegraphics[width=4in]{figure_name.2.eps}
-%\end{center}
-%\caption{
-%{\bf Bold the first sentence.}  Rest of figure 2  caption.  Caption 
-%should be left justified, as specified by the options to the caption 
-%package.
-%}
-%\label{Figure_label}
-%\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics{Figures/Pipeline.png}
+\end{center}
+\caption{
+{\bf Flow chart of the whole pipeline.}  From the genome assembly and annotation of the four species, we used orthology and paralogy groups from (Ref. needed). For each of these families we extracted the coding sequences (CDS) as well as upstream regions from the start codon. We built a maximum likelihood phylogenetic tree using PhyML on pre-aligned CDS with TranslatorX. On the one hand we computed the first fifth motifs of size of at least 4 nt using MEME on upstream regions, while on the other hand using both the tree and the upstream sequences were used to detect motifs with a phylogenetic footprinting approach using BigFoot. We then retained only conserved motifs between MEME and BigFoot.
+}
+\label{Pipeline}
+\end{figure}
 
 
 \section*{Tables}
