@@ -1,17 +1,5 @@
 \section*{Materials and Methods}
 
-developped a whole pipeline (show simple pipeline graph)
-\begin{itemize}
-\item Families upstream sequences extraction
-\item CDSs extraction and alignment
-\item CDSs phylogenetic tree
-\item BigFoot identification (explanation of phylogenetic score and alignment score)
-\item MEME research
-\item Comparison MEME and BigFoot
-\item Identification of given motif in species genome
-\item Correlation between motifs and expression levels
-\end{itemize}
-
 Used TranslatorX, PhyML, BigFoot, MEME.
 
 We set up a pipeline to make our analyse (Fig. ), the code is available at.
@@ -22,11 +10,11 @@ We used annotation and sequence from our previous analysis for P. and P. etc. (s
 
 \subsection*{Gene families}
 
-Looking at the phylogenetic tree of the \textit{aurelia} species, two WGDs occured at the root and affected three of our species. We have established some gene families from WGD2 using comparison, each family contains a set of orthologous genes between the four \textit{aurelia} species studied, and eventually, the paralogous gene found in each species ; at maximum the families contain 13 different genes. We identified 5781 families.
+Looking at the phylogenetic tree of the \textit{aurelia} species, two WGDs occured at the root and affected three of our species. We have established some gene families from WGD2 using comparison, each family contains a set of orthologous genes between the four \textit{aurelia} species studied, and eventually, the paralogous gene found in each species ; at maximum the families contain 13 different genes. 
 
 \subsection*{Upstream sequences extraction}
 
-We considered only families with at least 4 genes. Then, using our genome assembly and annotation of each species, we extracted upstream regions from 15nt with a cut-off at 250nt of all genes of the family. If the upstream region of a gene overlapped with another gene we discarded the gene, if the upstream region was less than 15nt long we also discarded the gene. Considering discarded genes, we kept only families with at least 4 members in our datasets. Under these conditions, we extracted genes from 5008 families.
+We considered only families with at least 4 genes. Then, using our genome assembly and annotation of each species, we extracted upstream regions, upstream of the start codon, from 15nt with a cut-off at 250nt of all genes of the family. If the upstream region of a gene overlapped with another gene we discarded the gene, if the upstream region was less than 15nt long we also discarded the gene. Considering discarded genes, we kept only families with at least 4 members in our datasets.
 
 \subsection*{Coding Sequences extraction and alignment}
 
@@ -45,4 +33,8 @@ Among the previous 5008 families, we identified 1060 motifs in 735 families.
 \subsection*{Comparison with MEME}
 
 To confirm our phylogenetic footprinting findings, used MEME (ref. needed) to analyze the motifs in each family. MEME use a statistical process to find motifs. Usually, among a set of given
+
+\subsection*{Motif classification and data analysis}
+
+All the analyses were produced using R.
 
