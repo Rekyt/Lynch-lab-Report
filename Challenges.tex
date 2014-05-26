@@ -1,6 +1,6 @@
 \section*{Challenges}
 
-During the pipeline development several methods questions were raised. Leading to choices
+During the pipeline development several methods questions were raised.
 
 \subsection*{Species tree or gene tree?}
 
@@ -14,10 +14,9 @@ The species tree (see figure.) gives us the relation between all considered, acc
 
 BigFoot does not output directly identified motifs, instead it produces two files with an alignment of the sequences and associated phylogenetic and alignment scores. The phylogenetic scores is computed, etc. The alignment scores, etc.
 
-Transcription factor binding sites are known to be generally conserved but degenerate on certain positions. For example, ... showed that this motif was conserved ....NN... with two highly variable positions (denoted by\"N\", meaning \"A\", \"T\", \"C\" or \"G\" using IUPAC notation). Thus, to seek biologically relevant motifs, we had to take into account that in the middle of motifs, the phylogenetic score could drop on several positions. (Show a phylogenetic score profile?)
+Transcription factor binding sites are known to be generally conserved but degenerate on certain positions. For example, ... showed that this motif was conserved ....NN... with two highly variable positions (denoted by\"N\", meaning \"A\", \"T\", \"C\" or \"G\" using IUPAC notation). Thus, to seek biologically relevant motifs, we had to take into account that in the middle of motifs, the phylogenetic score could drop on several positions, before rising again.
 
 To answer this problem we use a sliding window method of 8 nucleotides in our analysis: for each family, we looked at the scores of 8 nucleotides at the time and slide along the sequences. If the window contained at least 6 bases with scores above our thresholds, we would retain this motif. Then, from this particular region we would try to extend the sequence by adding adjacent nucleotides with good scores.
-
 
 
 \subsection*{Measure motif relevance}
