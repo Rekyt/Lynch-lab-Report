@@ -6,11 +6,11 @@ We set up a pipeline to make our analyse (Fig. ), the code is available at.
 
 \subsection*{Genomes and Annotation}
 
-We used annotation and sequence from our previous analysis for P. and P. etc. (see .) and the additionnal sequence of.
+We used annotation and sequence from our previous analyses for P. and P. etc. (see .) and the additionnal sequence of.
 
 \subsection*{Gene families}
 
-Looking at the phylogenetic tree of the \textit{aurelia} species, two WGDs occured at the root and affected three of our species. We have established some gene families from WGD2 using comparison, each family contains a set of orthologous genes between the four \textit{aurelia} species studied, and eventually, the paralogous gene found in each species ; at maximum the families contain 13 different genes. 
+Looking at the phylogenetic tree of the \textit{aurelia} species, two WGDs occured at the root and affected three of our species. We have established some gene families from WGD2 using comparison, each family contains a set of orthologous genes between the four \textit{aurelia} species studied, and eventually, the paralogous gene found in each species ; at maximum the families contain 13 different genes. Those families were established previously in our team. For details in the method see
 
 \subsection*{Upstream sequences extraction}
 
@@ -18,23 +18,21 @@ We considered only families with at least 4 genes. Then, using our genome assemb
 
 \subsection*{Coding Sequences extraction and alignment}
 
-Phylogenetic footprinting requires a phylogenetic tree when detecting motifs, to weigh the phylogenetical signal of given motifs. A motif conserved between two close species will have less importance than a motif conserved in two distant species. Because we are focusing on the conservation of upstream sequences we chose not to use them to avoid circularity. Instead, corresponding coding sequences (CDS) were extracted and used to model phylogenetic trees for each family. We preferred to have a gene tree over species tree, to avoid eventual inconsistencies because of gene conversion (ref. needed).
+Phylogenetic footprinting requires a phylogenetic tree to weigh the evolutionary signal of given motifs. A motif conserved between two close species will have less importance than a motif conserved in two distant species. Because we are focusing on the conservation of upstream sequences we chose not to use them to avoid circularity. Instead,corresponding coding sequences (CDS) were extracted and used to model phylogenetic trees for each family. We preferred to have a gene tree over species tree, to avoid eventual inconsistencies because of gene conversion (ref. needed). See Challenges section for explanations on the use of gene tree over species tree.
 
 CDSs in each family were aligned using TranslatorX (ref. needed) a protein-guided alignment software. The Maximum Likelihood (ML) tree was then computed using PhyML (ref. needed) default parameters.
 
 \subsection*{Phylogenetic footprinting}
 
-We used a phylogenetic footprinting software BigFoot (ref. needed) to detect highly conserved motifs in upstream sequences. We used 10000 burn-in cycles and 20000 cycles with a sampling rate of 1000 for the Hidden Monte-Carlo Markov Chain (HMCMC) process. BigFoot aligns the given sequences with gaps and tries to identify conserved and non-conserved regions, the stochastic process of the HMCMC let BigFoot refines its alignment. BigFoot assigns to each nucleotide an alignment score, which represents the confidence in the alignment, and a prediction score, measuring the \"phylogenetic signal\" of the given nucleotide, \textit{i.e.}, the more conserved the nucleotide is, according to the phylogenetic tree, the better the score.
+We used a phylogenetic footprinting software BigFoot (ref. needed) to detect highly conserved motifs in upstream sequences. We used 10000 burn-in cycles and 20000 cycles with a sampling rate of 1000 for the Hidden Monte-Carlo Markov Chain (HMCMC) process. BigFoot aligns the given sequences with gaps and tries to identify conserved and non-conserved regions ; it models the evolution of those regions along the phylogenetic tree assuming conserved regions evolve more slowly than non-conserved ones. At the end of the analysis BigFoot outputs an alignment of sequences used to identify slow and fast evolving regions as well as, for each nucleotide in the alignment, the posterior probability of the alignment, higher values show higher confidence in the alignment, and the phylogenetic footprinting result, higher values indicating higher posterior probability of purifying selection.
 
-Using these scores we detected motifs of at least 6 nucleotides long, alignment score over 0.8 and phylogenetic score over 0.9. Because of the known biological nature of Transcription Factor Binding Sites, we allowed for a \"gap\" in motifs of 2 nucleotide, so that the scores could drop under the thresholds in those gaps.
-
-Among the previous 5008 families, we identified 1060 motifs in 735 families.
+Using these scores we detected motifs of at least 6 nucleotides long, alignment score over 0.8 and phylogenetic score over 0.9. Because of the known biological nature of Transcription Factor Binding Sites, we allowed for a "gap" in motifs of 2 nucleotide, so that the scores could drop under the thresholds in those gaps. For detail method of the motif detection using BigFoot results, see Challenges section.
 
 \subsection*{Comparison with MEME}
 
-To confirm our phylogenetic footprinting findings, used MEME (ref. needed) to analyze the motifs in each family. MEME use a statistical process to find motifs. Usually, among a set of given
+To check our predictions and assess the conservation of found motifs, we compared motifs prediction with those of MEME, a widely used \textit{ab initio} motif finding tools. It searches for statistically significant motifs, with a gapless, local multialignment system.
 
 \subsection*{Motif classification and data analysis}
 
-All the analyses were produced using R.
+All the analyses were produced using R, scatterplots and graphs were produced using the R package ggplot2.
 
