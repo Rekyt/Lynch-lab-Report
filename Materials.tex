@@ -14,15 +14,13 @@ Looking at the phylogenetic tree of the \textit{aurelia} species, two WGDs occur
 
 \subsection*{Upstream sequences extraction}
 
-For each gene, we extracted 250nt upstream of the start codon
-
-We considered only families with at least 4 genes. Then, using our genome assembly and annotation of each species, we extracted upstream regions, upstream of the start codon, from 15nt with a cut-off at 250nt of all genes of the family. If the upstream region of a gene overlapped with another gene we discarded the gene, if the upstream region was less than 15nt long we also discarded the gene. Considering discarded genes, we kept only families with at least 4 members in our datasets.
+For each gene, we extracted 250nt upstream of the start codon. If the previous gene was less than 250nt away, we reduced the extracted region so that it includes only inter-genic region. If the region was less than 15nt long, we removed the gene from the family.
 
 \subsection*{Coding Sequences extraction and alignment}
 
 Phylogenetic footprinting requires a phylogenetic tree to weigh the evolutionary signal of given motifs. A motif conserved between two close species will have less importance than a motif conserved in two distant species. Because we are focusing on the conservation of upstream sequences we chose not to use them to avoid circularity. Instead,corresponding coding sequences (CDS) were extracted and used to model phylogenetic trees for each family. We preferred to have a gene tree over species tree, to avoid eventual inconsistencies because of gene conversion (ref. needed). See Challenges section for explanations on the use of gene tree over species tree.
 
-CDSs in each family were aligned using TranslatorX (ref. needed) a protein-guided alignment software. The Maximum Likelihood (ML) tree was then computed using PhyML (ref. needed) default parameters.
+CDSs in each family were aligned using TranslatorX (ref. needed) a protein-guided alignment software. The Maximum Likelihood (ML) tree was then computed using PhyML (ref. needed) the HKY85 model.
 
 \subsection*{Phylogenetic footprinting}
 
@@ -48,7 +46,7 @@ MEME was shown to have a very high False Positive Rate of the discovery (Ref. ne
 
 To assess the relevance of motifs found from BigFoot's outputs, we compared them to a well-known motif finding program: MEME. For each family we identified overlapping motifs between MEME and BigFoot. We computed an overlapping index as follows: 
 \begin{equation}
-0 \leq \frac{nucleotides in common}{size of the smallest motif} \leq 1
+0 \leq \frac{\text{nucleotides in common}}{\text{size of the smallest motif}} \leq 1
 \end{equation}
 if this index was over $0.9$ we would then considered the motif as relevant.
 
