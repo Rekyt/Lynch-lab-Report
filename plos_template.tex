@@ -54,9 +54,21 @@
 
 \pagestyle{myheadings}
 %% ** EDIT HERE **
+\definecolor{linkcol}{RGB}{0,0,238}
 
 % \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[hypcap]{caption}
+
+%% For hyperref
+\hypersetup{
+    breaklinks,
+    baseurl       = http://,
+    colorlinks    = true,
+    linkcolor     = linkcol,
+    pdfborder     = 0 0 0
+}
 
 %% ** EDIT HERE **
 %% PLEASE INCLUDE ALL MACROS BELOW
