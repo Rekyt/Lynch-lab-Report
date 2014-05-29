@@ -7,7 +7,7 @@ all: plos_template.pdf
 plos_template.pdf: plos_template.tex
 	@pdflatex $<
 	#@bibtex $<
-	#@pdflatex $<
+	@pdflatex $<
 	#@pdflatex $<
 
 plos_template.tex: Introduction.tex Materials.tex Results.tex Perspectives.tex
