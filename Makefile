@@ -6,7 +6,7 @@ all: plos_template.pdf
 
 plos_template.pdf: plos_template.tex
 	@pdflatex $<
-	@bibtex $<
+	@bibtex $(patsubst %.tex, %.aux, $<)
 	@pdflatex $<
 	@pdflatex $<
 
@@ -17,3 +17,4 @@ clean:
 	@rm *.log
 	@echo "Removing .aux files..."
 	@rm *.aux
+	@rm *.blg *.bbl *.out
