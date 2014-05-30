@@ -1,6 +1,6 @@
 \section*{Methods}
 
-We set up a pipeline to make our analyse (Fig.~\ref{fig:Pipeline}), the code is available at.
+We set up a pipeline using Biopython~\citep{cock_biopython:_2009} to make our analysis (Fig.~\ref{fig:Pipeline}), the code is available at \url{https://github.com/LynchLabGroup/para}
 
 \subsection*{Genomes and Annotation}
 
@@ -38,7 +38,7 @@ To answer this problem we use a sliding window method of 8 nucleotides in our an
 
 To check our predictions and assess the conservation of found motifs, we compared motifs prediction with those of MEME~\citep{bailey_meme:_2006}, a widely used \textit{ab initio} motif finding tools. It searches for statistically significant motifs, with a gap-less, local multi-alignment system.
 
-MEME was shown to have a very high False Positive Rate of the discovery (Ref. needed). That is why many studies combine multiple motif detection tools. In our case, MEME is of particular interest as it obtains motifs using a totally different method from BigFoot.
+MEME was shown to have a very high False Positive Rate of the discovery~\citep{zia_towards_2012}. That is why many studies combine multiple motif detection tools~\citep{liseron-monfils_promzea:_2013}. In our case, MEME is of particular interest as it obtains motifs using a totally different method from BigFoot.
 
 To assess the relevance of motifs found from BigFoot's outputs, we compared them to a well-known motif finding program: MEME. For each family we identified overlapping motifs between MEME and BigFoot. We computed an overlapping index as follows: 
 \begin{equation}
