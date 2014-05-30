@@ -69,6 +69,7 @@
     baseurl       = http://,
     colorlinks    = true,
     linkcolor     = linkcol,
+    citecolor     = linkcol,
     pdfborder     = 0 0 0
 }
 
@@ -128,7 +129,7 @@ I would to thank my advisor Jean-François Goût for his patient and constant su
 \includegraphics[scale=2.2]{Figures/TreeOfEuk.png}
 \end{center}
 \caption{
-{\bf Phylogenetic tree of eukaryotes phylas.} The \textit{Ciliates} group, underlined in red in the figure, inside the Alveolates among the Chromoalveloates, it contains the \textit{Paramecium} genus. While the Animals (Metazoa) belong to the Opisthokonts group. From (Ref. needed)
+{\bf Phylogenetic tree of eukaryotes phylas.} The \textit{Ciliates} group, underlined in red in the figure, inside the Alveolates among the Chromoalveloates, it contains the \textit{Paramecium} genus. While the Animals (Metazoa) belong to the Opisthokonts group. From~\citep{keeling_tree_2005}
 } 
 \label{fig:TreeOfEuk}
 \end{figure}
@@ -139,7 +140,7 @@ I would to thank my advisor Jean-François Goût for his patient and constant su
 \includegraphics[scale=0.7]{Figures/SpeciesGene.png}
 \end{center}
 \caption{
-{\bf Phylogenetic trees of \textit{Paramecium} and according gene tree.} A: \textit{Paramecium} species tree with WGD positions (Adapted from Ref. needed); B: An example of a family gene tree. A single \textit{caudatum} gene and four genes for each \textit{aurelia} species. \textit{Legend:} blue circle, intermediary WGD; orange circle, more recent WGD; as dated by (Ref. needed). (Adapted from Ref. needed)
+{\bf Phylogenetic trees of \textit{Paramecium} and according gene tree.} A: \textit{Paramecium} species tree with WGD positions (Adapted from~\citealt{mcgrath_insights_2014}); B: An example of a family gene tree. A single \textit{caudatum} gene and four genes for each \textit{aurelia} species. \textit{Legend:} blue circle, intermediary WGD; orange circle, more recent WGD; as dated by~\citep{aury_global_2006}. (Adapted from \citealt{mcgrath_insights_2014})
 }
 \label{fig:DuplicationTree}
 \end{figure}
@@ -150,7 +151,7 @@ I would to thank my advisor Jean-François Goût for his patient and constant su
 \includegraphics{Figures/Pipeline.png}
 \end{center}
 \caption{
-{\bf Flow chart of the whole pipeline.}  From the genome assembly and annotation of the four species, we used orthology and paralogy groups from (Ref. needed). For each of these families we extracted the coding sequences (CDS) as well as upstream regions from the start codon. We built a maximum likelihood phylogenetic tree using PhyML on pre-aligned CDS with TranslatorX. On the one hand we computed the first fifth motifs of size of at least 4 nt using MEME on upstream regions, while on the other hand using both the tree and the upstream sequences were used to detect motifs with a phylogenetic footprinting approach using BigFoot. We then retained only conserved motifs between MEME and BigFoot.
+{\bf Flow chart of the whole pipeline.}  From the genome assembly and annotation of the four species, we used orthology and paralogy groups from \citep{mcgrath_insights_2014}. For each of these families we extracted the coding sequences (CDS) as well as upstream regions from the start codon. We built a maximum likelihood phylogenetic tree using PhyML on pre-aligned CDS with TranslatorX \citep{abascal_translatorx:_2010}. On the one hand we computed the first fifth motifs of size of at least 4 nt using MEME on upstream regions \citep{bailey_meme:_2006}, while on the other hand using both the tree and the upstream sequences were used to detect motifs with a phylogenetic footprinting approach using BigFoot \citep{satija_bigfoot:_2009}. We then retained only conserved motifs between MEME and BigFoot.
 }
 \label{fig:Pipeline}
 \end{figure}
@@ -160,7 +161,7 @@ I would to thank my advisor Jean-François Goût for his patient and constant su
 \includegraphics[scale=0.6]{Figures/ScoresPlot.png}
 \end{center}
 \caption{
-{\bf Motif detection from BigFoot example.} BigFoot proceeds to phylogenetic prediction using an alignment technique, refer to (Ref. needed) for more informations. For each position in the alignment, BigFoot assigns an alignment confidence score and phylogenetic footprinting,\textit{i.e.} motif prediction, confidence score. In our analysis we used a detection technique to allow gaps in both the prediction and the alignment score. Curves: Red solid: Prediction score, Red dashed: Prediction threshold used, Blue solid: Alignment score, Blue dashed: Alignment threshold. Gray boxes: potential motifs detected in the sequence.
+{\bf Motif detection from BigFoot example.} BigFoot proceeds to phylogenetic prediction using an alignment technique, refer to~\citep{satija_bigfoot:_2009} for more informations. For each position in the alignment, BigFoot assigns an alignment confidence score and phylogenetic footprinting,\textit{i.e.} motif prediction, confidence score. In our analysis we used a detection technique to allow gaps in both the prediction and the alignment score. Curves: Red solid: Prediction score, Red dashed: Prediction threshold used, Blue solid: Alignment score, Blue dashed: Alignment threshold. Gray boxes: potential motifs detected in the sequence.
 }
 \label{fig:Scores}
 \end{figure}
