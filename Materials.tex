@@ -36,7 +36,7 @@ To answer this problem we use a sliding window method of 8 nucleotides in our an
 
 \subsection*{Comparison with MEME}
 
-To check our predictions and assess the conservation of found motifs, we compared motifs prediction with those of MEME~\citep{bailey_meme:_2006}, a widely used \textit{ab initio} motif finding tools. It searches for statistically significant motifs, with a gap-less, local multi-alignment system.
+To check our predictions and assess the conservation of found motifs, we compared motifs prediction with those of MEME~\citep{bailey_meme:_2006}, a widely used \textit{ab initio} motif finding tools~\citep{dhaeseleer_how_2006}. It searches for statistically significant motifs, with a gap-less, local multi-alignment system.
 
 MEME was shown to have a very high False Positive Rate of the discovery~\citep{zia_towards_2012}. That is why many studies combine multiple motif detection tools~\citep{liseron-monfils_promzea:_2013}. In our case, MEME is of particular interest as it obtains motifs using a totally different method from BigFoot.
 
@@ -44,7 +44,7 @@ To assess the relevance of motifs found from BigFoot's outputs, we compared them
 \begin{equation}
 0 \leq \frac{\text{nucleotides in common}}{\text{size of the smallest motif}} \leq 1
 \end{equation}
-if this index was over $0.9$ we would then considered the motif as relevant.
+if this index was over $0.9$ we would then considered the motif as relevant. Thus at the end we would only retain motifs that were pretty conserved among the different species.
 
 \subsection*{Motif classification and data analysis}
 
