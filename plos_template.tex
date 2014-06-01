@@ -172,17 +172,27 @@ I would to thank my advisor Jean-François Goût for his patient and constant su
 \label{fig:Scores}
 \end{figure}
 
-%\section*{Tables}
-%\begin{table}[!ht]
-%\caption{
-%\bf{Table title}}
-%\begin{tabular}{|c|c|c|}
-%table information
-%\end{tabular}
-%\begin{flushleft}Table caption
-%\end{flushleft}
-%\label{tab:label}
-% \end{table}
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[scale=1]{Figures/PropFigure.pdf}
+\end{center}
+\caption{
+{\bf Proportion of genes with detected common motifs in all the species.} BigFoot proceeds to phylogenetic prediction using an alignment technique, refer to~\citep{satija_bigfoot:_2009} for more informations. For each position in the alignment, BigFoot assigns an alignment confidence score and phylogenetic footprinting,\textit{i.e.} motif prediction, confidence score. In our analysis we used a detection technique to allow gaps in both the prediction and the alignment score. Curves: Red solid: Prediction score, Red dashed: Prediction threshold used, Blue solid: Alignment score, Blue dashed: Alignment threshold. Gray boxes: potential motifs detected in the sequence.
+}
+\label{fig:PropFigure}
+\end{figure}
+
+\section*{Tables}
+\begin{table}[!ht]
+\caption{
+\bf{Common motifs found in all species}}
+\begin{tabular}{|c|c|c|}
+table information
+\end{tabular}
+\begin{flushleft}Table caption
+\end{flushleft}
+\label{tab:label}
+\end{table}
 
 %\section*{References}
 % The bibtex filename
