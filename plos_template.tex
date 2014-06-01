@@ -24,6 +24,7 @@
 \usepackage[round,sort]{natbib}
 
 \usepackage{color} 
+\usepackage[table]{xcolor}
 
 % Use doublespacing - comment out for single spacing
 %\usepackage{setspace} 
@@ -76,6 +77,10 @@
 %% ** EDIT HERE **
 %% PLEASE INCLUDE ALL MACROS BELOW
 
+
+%% COLORS
+\definecolor{light-gray}{gray}{0.95}
+
 %% END MACROS SECTION
 
 \begin{document}
@@ -118,7 +123,7 @@ Michael Lynch$^{2}$
 
 I would to thank my advisor Jean-François Goût for his patient and constant support, Michael Lynch for having me in his lab. More broadly, I would like to thank the whole Lynch lab team, for great scientific and non-scientific discussions.
 
-\section*{Figure Legends}
+\section*{Figures}
 
 \begin{figure}[!ht]
 \begin{center}
@@ -177,7 +182,7 @@ I would to thank my advisor Jean-François Goût for his patient and constant su
 \includegraphics[scale=0.5]{Figures/PropFigure.pdf}
 \end{center}
 \caption{
-{\bf Proportion of genes with detected common motifs in all the species.} BigFoot proceeds to phylogenetic prediction using an alignment technique, refer to~\citep{satija_bigfoot:_2009} for more informations. For each position in the alignment, BigFoot assigns an alignment confidence score and phylogenetic footprinting,\textit{i.e.} motif prediction, confidence score. In our analysis we used a detection technique to allow gaps in both the prediction and the alignment score. Curves: Red solid: Prediction score, Red dashed: Prediction threshold used, Blue solid: Alignment score, Blue dashed: Alignment threshold. Gray boxes: potential motifs detected in the sequence.
+{\bf Ratio of genes with detected common motifs in all the species.} Legend: A, Proportion of genes containing the motif by species ; B, separated by motifs and by species ; C, grouped by motif. bi: \textit{P. biaurelia}; ca: \textit{P. caudatum}; sex: \textit{P. sexaurelia}; tet: \textit{P.tetraurelia}. \textit{P. caudatum} seems, for all motifs, to have less genes containing them then the other species. While two motifs seems importantly lower than others: TAAATCT and TTAATATT, but TTAATATT and TTAATTA seem also lower than other motifs. For more details on the ratios, see Table~\ref{tab:Motifs}
 }
 \label{fig:PropFigure}
 \end{figure}
