@@ -10,7 +10,7 @@ plos_template.pdf: plos_template.tex
 	@pdflatex $<
 	@pdflatex $<
 
-plos_template.tex: Introduction.tex Materials.tex Results.tex Perspectives.tex
+plos_template.tex: Introduction.tex Abstract.tex Materials.tex Results.tex Perspectives.tex $(shell ls Figures/*.png) $(shell ls Figures/*.pdf)
 	touch $@
 clean:
 	@echo "Removing .log files..."
